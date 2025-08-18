@@ -1,14 +1,10 @@
----
-
 ````markdown
 # WEB STACK IMPLEMENTATION (LEMP STACK)
 
 ## 📖 Introduction
 The **LEMP stack** (Linux, Nginx, MySQL, PHP) is a powerful and popular stack for serving dynamic web applications. Unlike LAMP, which uses Apache, LEMP swaps Apache for **Nginx** (pronounced "Engine-X"), offering better performance under high load.
 
-This documentation narrates my journey setting up a **LEMP stack** from scratch — the wins, the headaches, and those "Aha!" moments that make DevOps learning addictive.  
-
----
+This documentation narrates my journey setting up a **LEMP stack** from scratch — the wins, the headaches, and those "Aha!" moments that make DevOps learning addictive.
 
 ## 📌 Step 0 - Preparing Prerequisites
 
