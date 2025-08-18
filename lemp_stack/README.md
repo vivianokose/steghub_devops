@@ -1,12 +1,10 @@
----
-
-````markdown
 # WEB STACK IMPLEMENTATION (LEMP STACK)
 
 ## 📖 Introduction
+
 The **LEMP stack** (Linux, Nginx, MySQL, PHP) is a powerful and popular stack for serving dynamic web applications. Unlike LAMP, which uses Apache, LEMP swaps Apache for **Nginx** (pronounced "Engine-X"), offering better performance under high load.
 
-This documentation narrates my journey setting up a **LEMP stack** from scratch — the wins, the headaches, and those "Aha!" moments that make DevOps learning addictive.  
+This documentation narrates my journey setting up a **LEMP stack** from scratch — the wins, the headaches, and those "Aha!" moments that make DevOps learning addictive.
 
 ---
 
@@ -204,26 +202,10 @@ INSERT INTO todo_list (content) VALUES ("My first important task");
 ```
 
 ![Test Database](./images/mysql%20test-datatbase.png)
+
 ![Example Database](./images/mysql%20example%20database.png)
 
 Seeing the **todo list** render in my browser was pure satisfaction, it feels like a chef finally tasting the dish they’ve been cooking for hours.
-
----
-
-## 📊 Backend Workflow Diagram
-
-```mermaid
-flowchart TD
-    A[Browser Request] --> B[Nginx Web Server]
-    B -->|Static Content| C[Browser Response]
-    B -->|PHP Request| D[PHP Processor - PHP-FPM]
-    D --> E[MySQL Database]
-    E --> D
-    D --> B
-    B --> C
-```
-
----
 
 ## 🧠 Lessons Learned
 
@@ -242,7 +224,3 @@ Completing this LEMP stack setup was a mix of:
 - **Satisfaction** (seeing PHP pull data from MySQL)
 
 This wasn’t just about installing software; it was about **understanding how they work together** to serve dynamic web apps.
-
-```
-
-```
