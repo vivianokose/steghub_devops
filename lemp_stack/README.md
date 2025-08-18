@@ -6,8 +6,6 @@ The **LEMP stack** (Linux, Nginx, MySQL, PHP) is a powerful and popular stack fo
 
 This documentation narrates my journey setting up a **LEMP stack** from scratch — the wins, the headaches, and those "Aha!" moments that make DevOps learning addictive.
 
----
-
 ## 📌 Step 0 - Preparing Prerequisites
 
 Before diving in, I needed:
