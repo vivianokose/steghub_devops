@@ -11,15 +11,18 @@ This documentation narrates my journey setting up a **LEMP stack** from scratch 
 ---
 
 ## 📌 Step 0 - Preparing Prerequisites
+
 Before diving in, I needed:
+
 - An **Ubuntu Server** running (mine was on AWS EC2).
 - Basic understanding of SSH, Linux commands, and some courage to face the inevitable **"permission denied"** errors.
 - `sudo` privileges to install and configure software.
 
 I connected to my server:
+
 ```bash
 ssh -i keypair ubuntu@54.198.246.44
-````
+```
 
 ✅ Easy start. No hiccups here.
 
@@ -34,17 +37,23 @@ sudo apt update
 sudo apt install nginx -y
 ```
 
+![Nginx Installation](images/nginx%20installation.png)
+
 Verified installation:
 
 ```bash
 sudo systemctl status nginx
 ```
 
+![Nginx Status](./images/nginx%20status.png)
+
 And confirmed via browser:
 
 ```
 http://54.198.246.44
 ```
+
+![Nginx Welcome page](./images/nginx%20webpage.png)
 
 🎉 Seeing the **Nginx welcome page** was my first small win. Felt like a green light at the start of a long road.
 
@@ -58,11 +67,15 @@ Next, I installed **MySQL**:
 sudo apt install mysql-server -y
 ```
 
+![MySQL Installation](./images/mysql%20installation.png)
+
 Secured MySQL:
 
 ```bash
 sudo mysql_secure_installation
 ```
+
+![MySQL Secure Installation](./images/mysql%20secure%20installation.png)
 
 Here’s where frustration hit — setting the root password and enabling authentication took a couple of retries. Lesson learned: always write down temporary credentials.
 
@@ -76,7 +89,9 @@ For PHP to work with Nginx, I installed:
 sudo apt install php-fpm php-mysql -y
 ```
 
-No drama here — a rare smooth step in DevOps.
+![PHP Installation](./images/php-fpm%20php-mysql%20installation.png)
+
+No drama here, just a rare smooth step in DevOps.
 
 ---
 
@@ -87,6 +102,8 @@ I created a new **server block** for my project:
 ```bash
 sudo nano /etc/nginx/sites-available/projectLEMP
 ```
+
+![PHP available sites](./images/php_available-sites.png)
 
 Configuration example:
 
@@ -134,6 +151,8 @@ Created a test PHP file:
 sudo nano /var/www/projectLEMP/info.php
 ```
 
+![PHP Test](./images/info%20php%20test.png)
+
 Content:
 
 ```php
@@ -150,6 +169,8 @@ http://54.198.246.44/info.php
 
 🎯 Success! PHP was running with Nginx.
 
+![PHP info page](./images/php%20info%20page.png)
+
 ---
 
 ## 📌 Step 6 — Retrieving Data from MySQL Database with PHP
@@ -159,6 +180,8 @@ I logged into MySQL:
 ```bash
 sudo mysql
 ```
+
+![MySQL login](./images/mysql%20root%20login.png)
 
 Created database and user:
 
@@ -180,29 +203,10 @@ CREATE TABLE example_database.todo_list (
 INSERT INTO todo_list (content) VALUES ("My first important task");
 ```
 
-PHP script to display data:
+![Test Database](./images/mysql%20test-datatbase.png)
+![Example Database](./images/mysql%20example%20database.png)
 
-```php
-<?php
-$user = "example_user";
-$password = "password";
-$database = "example_database";
-$table = "todo_list";
-
-try {
-    $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-    echo "<h2>TODO List</h2><ol>";
-    foreach($db->query("SELECT content FROM $table") as $row) {
-        echo "<li>" . $row['content'] . "</li>";
-    }
-    echo "</ol>";
-} catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-}
-?>
-```
-
-Seeing the **todo list** render in my browser was pure satisfaction — like a chef finally tasting the dish they’ve been cooking for hours.
+Seeing the **todo list** render in my browser was pure satisfaction, it feels like a chef finally tasting the dish they’ve been cooking for hours.
 
 ---
 
@@ -223,9 +227,9 @@ flowchart TD
 
 ## 🧠 Lessons Learned
 
-* **Permissions matter** — forgetting `sudo` is a rite of passage.
-* **Configurations can be fragile** — one missing semicolon in Nginx configs can break the whole server.
-* The sense of progress from hitting small milestones kept me going.
+- **Permissions matter** — forgetting `sudo` is a rite of passage.
+- **Configurations can be fragile** — one missing semicolon in Nginx configs can break the whole server.
+- The sense of progress from hitting small milestones kept me going.
 
 ---
 
@@ -233,10 +237,12 @@ flowchart TD
 
 Completing this LEMP stack setup was a mix of:
 
-* **Excitement** (first Nginx page loaded!)
-* **Frustration** (MySQL authentication quirks)
-* **Satisfaction** (seeing PHP pull data from MySQL)
+- **Excitement** (first Nginx page loaded!)
+- **Frustration** (MySQL authentication quirks)
+- **Satisfaction** (seeing PHP pull data from MySQL)
 
 This wasn’t just about installing software; it was about **understanding how they work together** to serve dynamic web apps.
+
+```
 
 ```
