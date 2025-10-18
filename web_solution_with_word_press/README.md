@@ -65,7 +65,7 @@ Before you begin:
 5. Allow inbound HTTP (port 80) and SSH (port 22) traffic.
 6. Launch the instance.
 
-![EC2 Instance Running](/images/01_instances_launched_ubuntu.png)
+![EC2 Instance Running](./images/01_instances_launched_ubuntu.png)
 
 ---
 
@@ -87,7 +87,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 Create **3 additional 10GB EBS volumes** and attach them to your instance.
 
-![EBS Volumes Created](/images/volumes%20created%20and%20attached.png)
+![EBS Volumes Created](./images/volumes%20created%20and%20attached.png)
 
 Verify they are attached:
 
@@ -95,7 +95,7 @@ Verify they are attached:
 lsblk
 ```
 
-![lsblk Output](/images/08_lsblk_after_partition.png)
+![lsblk Output](./images/08_lsblk_after_partition.png)
 
 ---
 
@@ -122,7 +122,7 @@ lsblk
    sudo lvcreate -n logs-lv -L 14G webdata-vg
    ```
 
-![LVM Setup](/images/07_gdisk_partition_nvme1n1.png)
+![LVM Setup](./images/07_gdisk_partition_nvme1n1.png)
 
 ---
 
@@ -148,7 +148,7 @@ lsblk
    df -h
    ```
 
-![Mount Points](/images/07_gdisk_partition_nvme1n1.png)
+![Mount Points](./images/07_gdisk_partition_nvme1n1.png)
 
 4. Update `/etc/fstab` for persistent mounting:
 
@@ -212,7 +212,7 @@ sudo apt install php libapache2-mod-php php-mysql mysql-server -y
    sudo systemctl restart apache2
    ```
 
-![WordPress Files in HTML Directory](/images/15_wordpress_files_copied.png)
+![WordPress Files in HTML Directory](./images/15_wordpress_files_copied.png)
 
 ---
 
@@ -258,13 +258,13 @@ sudo apt install php libapache2-mod-php php-mysql mysql-server -y
 http://54.167.111.208/wordpress
 ```
 
-![WordPress Setup Page](/images/word_press%20main%20page.png)
+![WordPress Setup Page](./images/word_press%20main%20page.png)
 
 ---
 
 ## 🏗️ Architecture Overview
 
-![Architecture Diagram](/images/architecture%20design.png)
+![Architecture Diagram](./images/architecture%20design.png)
 
 ```
 +------------------------------------------------------+
