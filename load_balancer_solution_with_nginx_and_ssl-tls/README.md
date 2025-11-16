@@ -1,4 +1,13 @@
 
+![Status](https://img.shields.io/badge/Project%20Status-Completed-success?style=flat-square)
+![AWS](https://img.shields.io/badge/AWS-EC2-orange?style=flat-square)
+![Linux](https://img.shields.io/badge/Linux-Ubuntu%2020.04-blue?style=flat-square)
+![Nginx](https://img.shields.io/badge/Nginx-Load%20Balancer-green?style=flat-square)
+![HTTPS](https://img.shields.io/badge/SSL%2FTLS-Let's%20Encrypt-yellow?style=flat-square)
+![Domain](https://img.shields.io/badge/Domain-DuckDNS-purple?style=flat-square)
+![Automation](https://img.shields.io/badge/Automation-Cron%20Jobs-lightgrey?style=flat-square)
+![Certbot](https://img.shields.io/badge/Certbot-Auto%20Renewal-red?style=flat-square)
+
 ---
 
 # 📄 **Nginx Load Balancer with SSL/TLS (DuckDNS + Certbot Project)**
