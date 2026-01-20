@@ -1,0 +1,21 @@
+[webservers]
+172.31.23.110 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem
+<<<<<<< HEAD
+#172.31.26.234 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem
+=======
+172.31.26.234 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem
+>>>>>>> 52c2f7c375cf336e8a98454d848466f8d0715fca
+
+[nfs]
+172.31.29.177 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem
+
+<<<<<<< HEAD
+#[db]
+#172.31.21.129 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem
+=======
+[db]
+172.31.21.129 ansible_ssh_user=ec2-user ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem
+>>>>>>> 52c2f7c375cf336e8a98454d848466f8d0715fca
+
+[lb]
+172.31.17.219 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/home/ubuntu/steghub-keypair.pem

@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+---
+- name: Update RHEL servers (web, db, nfs)
+  hosts: webservers, db, nfs
+  become: yes
+  tasks:
+    - name: Ensure wireshark is installed
+=======
+- name: update web, nfs and db servers
+  hosts: webservers, nfs, db
+  become: yes
+  tasks:
+    - name: ensure wireshark is installed
+>>>>>>> 52c2f7c375cf336e8a98454d848466f8d0715fca
+      yum:
+        name: wireshark
+        state: latest
+
+<<<<<<< HEAD
+- name: Update Ubuntu servers (LB)
+  hosts: lb
+  become: yes
+  tasks:
+    - name: Update apt repo
+      apt:
+        update_cache: yes
+
+    - name: Ensure wireshark is installed
+=======
+- name: update LB server
+  hosts: lb
+  become: yes
+  tasks:
+    - name: update apt repo
+      apt:
+        update_cache: yes
+
+    - name: ensure wireshark is installed
+>>>>>>> 52c2f7c375cf336e8a98454d848466f8d0715fca
+      apt:
+        name: wireshark
+        state: latest
